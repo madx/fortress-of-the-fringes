@@ -1,37 +1,24 @@
 #import "./variables.typ": *
 
-#set page(paper: "a5", numbering: "1", margin: 1cm)
-#set text(font: font-copy, size: 8pt)
+#set page(paper: "a5", numbering: "1", margin: 0.75cm, fill: color-light-paper)
+#set text(font: font-copy, size: 8pt, lang: "fr", fill: color-ink)
 #set par(justify: true)
-#show heading: set text(font: font-sans)
+#show heading: set text(font: font-copy, weight: "extrabold", fill: color-ink)
 #show link: underline
-#show link: set text(rgb("#de4c5b"))
+#show link: set text(rgb("#de4c5b"), weight: "bold")
 
 #set document(
-  title: [Fortress of the Fringes],
+  title: [La Fortresse des Franges],
 )
-
-#show title: set text(font: "Merriweather Sans", size: 32pt, weight: 900)
-#show title: set align(center)
-#show title: set par(leading: 0.4em)
-#show title: set block(below: 2em)
 
 // Cover page
 
-#include "./cover.typ"
+#include "./frontmatter.typ"
 #pagebreak()
-#include "./intro.typ"
-
+#include "./1-prologue.typ"
 #pagebreak()
-
-= The Fortress
-
+#include "./2-the-fortress.typ"
 #pagebreak()
-
-= The Treacherous Caves
-
+#include "./3-the-caves.typ"
 #pagebreak()
-
-= The Fringes
-
-
+#include "./4-the-fringes.typ"
